@@ -57,6 +57,17 @@ public:
   // will work correctly without defining these, you should omit them. A user
   // of the class must be able to create, copy, assign, and destroy Lists.
 
+  // TODO: declare default constructor
+
+
+  // TODO: declare destructor
+
+
+  // TODO: declare copy constructor
+
+
+  // TODO: declare assignment operator
+
 private:
   //a private type
   struct Node {
@@ -80,6 +91,8 @@ public:
 
     // Add a default constructor here. The default constructor must set both
     // pointer members to null pointers.
+
+    // TODO: declare Iterator default constructor
 
 
 
@@ -108,6 +121,20 @@ public:
     //     violates the REQURES clause.
     // Note: comparing both the list and node pointers should be
     // sufficient to meet these requirements.
+
+    // TODO: declare operator*
+
+
+    // TODO: declare prefix operator++
+
+
+    // TODO: declare postfix operator++
+
+
+    // TODO: declare operator==
+
+
+    // TODO: declare operator!=
 
 
 
@@ -197,6 +224,86 @@ public:
 // (your choice). Do not change the public interface of List, although you
 // may add the Big Three if needed.  Do add the public member functions for
 // Iterator.
+
+// *** PUBLIC IMPLEMENTATIONS ***
+
+// TODO: implement default constructor
+
+
+// TODO: implement destructor
+
+
+// TODO: implement copy constructor
+
+
+// TODO: implement assignment operator
+
+
+// TODO: implement empty
+
+
+// TODO: implement size
+
+
+// TODO: implement front
+
+
+// TODO: implement back
+
+
+// TODO: implement push_front
+
+
+// TODO: implement push_back
+
+
+// TODO: implement pop_front
+
+
+// TODO: implement pop_back
+
+
+// TODO: implement clear
+
+
+// *** PRIVATE IMPLEMENTATIONS ***
+
+// TODO: implement copy_all
+
+
+// *** ITERATOR IMPLEMENTATIONS ***
+
+// TODO: implement Iterator default constructor
+
+
+// TODO: implement operator*
+
+
+// TODO: implement prefix operator++
+
+
+// TODO: implement postfix operator++
+
+
+// TODO: implement operator==
+
+
+// TODO: implement operator!=
+
+
+// TODO: implement Iterator private constructor
+
+
+// TODO: implement begin
+
+
+// TODO: implement end
+
+
+// TODO: implement erase
+
+
+// TODO: implement insert
 
 
 #endif // Do not remove this. Write all your code above this line.

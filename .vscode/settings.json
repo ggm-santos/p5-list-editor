@@ -1,9 +1,21 @@
 {
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
+    "explorer.sortOrder": "type",
     "explorer.fileNesting.patterns": {
         "*.hpp": "${capture}.cpp, ${capture}_*.cpp",
-        "TextBuffer.hpp": "e0.cpp, femto.cpp, line.cpp", 
-        "Makefile": "*.in, *.out, *.out.correct, *.exe, *.o, *.csv"
-    }
+        "Makefile": "e0.cpp, femto.cpp, line.cpp, *.in, *.out, *.out.correct, *.exe, *.o, *.csv"
+    },
+    "cSpell.words": [
+        "ancel",
+        "botbar",
+        "Femto",
+        "Kamil",
+        "Lovas",
+        "minibuffer",
+        "nhijk",
+        "pico",
+        "Razak",
+        "Saquib"
+    ]
 }
