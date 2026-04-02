@@ -1,0 +1,9 @@
+{
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.patterns": {
+        "*.hpp": "${capture}.cpp, ${capture}_*.cpp",
+        "TextBuffer.hpp": "e0.cpp, femto.cpp, line.cpp", 
+        "Makefile": "*.in, *.out, *.out.correct, *.exe, *.o, *.csv"
+    }
+}
