@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// TODO Add your test cases here
+// Add your test cases here
 
 TEST(test_stub) {
     // Add test code here

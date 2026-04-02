@@ -10,7 +10,7 @@
 #include <iterator> //std::bidirectional_iterator_tag
 #include <cassert>  //assert
 
-// TODO
+
 template <typename T>
 class List {
   //OVERVIEW: a doubly-linked, double-ended list with Iterator interface
@@ -78,13 +78,12 @@ public:
   public:
     //OVERVIEW: Iterator interface to List
 
-    // TODO Add a default constructor here. 
-    // The default constructor must set both pointer members to null pointers.
-    
+    // Add a default constructor here. The default constructor must set both
+    // pointer members to null pointers.
 
 
-    // TODO Add custom implementations 
-    // of the destructor, copy constructor, and
+
+    // Add custom implementations of the destructor, copy constructor, and
     // overloaded assignment operator, if appropriate. If these operations
     // will work correctly without defining these, you should omit them. A user
     // of the class must be able to copy, assign, and destroy Iterators.
@@ -160,33 +159,33 @@ public:
   private:
     const List *list_ptr; //pointer to the List associated with this Iterator
     Node *node_ptr; //current Iterator position is a List node
-    // TODO add any additional necessary member variables here
+    // add any additional necessary member variables here
 
 
-    // TODO add any friend declarations here
+    // add any friend declarations here
 
 
-    // TODO construct an Iterator at a specific position in the given List
+    // construct an Iterator at a specific position in the given List
     Iterator(const List *lp, Node *np);
 
   };//List::Iterator
   ////////////////////////////////////////
 
-  // TODO return an Iterator pointing to the first element
+  // return an Iterator pointing to the first element
   Iterator begin() const;
 
-  // TODO return an Iterator pointing to "past the end"
+  // return an Iterator pointing to "past the end"
   Iterator end() const;
 
   //REQUIRES: i is a valid, dereferenceable iterator associated with this list
   //MODIFIES: invalidates all iterators to the removed element
-  // TODO EFFECTS: Removes a single element from the list container.
+  //EFFECTS: Removes a single element from the list container.
   //         Returns An iterator pointing to the element that followed the
   //         element erased by the function call
   Iterator erase(Iterator i);
 
   //REQUIRES: i is a valid iterator associated with this list
-  // TODO EFFECTS: Inserts datum before the element at the specified position.
+  //EFFECTS: Inserts datum before the element at the specified position.
   //         Returns an iterator to the the newly inserted element.
   Iterator insert(Iterator i, const T &datum);
 
@@ -194,7 +193,7 @@ public:
 
 
 ////////////////////////////////////////////////////////////////////////////////
-// TODO Add your member function implementations below or in the class above
+// Add your member function implementations below or in the class above
 // (your choice). Do not change the public interface of List, although you
 // may add the Big Three if needed.  Do add the public member functions for
 // Iterator.
