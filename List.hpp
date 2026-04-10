@@ -57,16 +57,17 @@ public:
   // will work correctly without defining these, you should omit them. A user
   // of the class must be able to create, copy, assign, and destroy Lists.
 
-  // TODO: declare default constructor
+  // DONE: declare default constructor
+  List();
 
+  // DONE: declare destructor
+  ~List();
 
-  // TODO: declare destructor
+  // DONE: declare copy constructor
+  List(const List &list);
 
-
-  // TODO: declare copy constructor
-
-
-  // TODO: declare assignment operator
+  // DONE: declare assignment operator
+  List &operator=(const List &list);
 
 private:
   //a private type
@@ -82,6 +83,7 @@ private:
 
   Node *first;   // points to first Node in list, or nullptr if list is empty
   Node *last;    // points to last Node in list, or nullptr if list is empty
+  int num_elements; // running count of elements in list
 
 public:
   ////////////////////////////////////////
@@ -92,8 +94,8 @@ public:
     // Add a default constructor here. The default constructor must set both
     // pointer members to null pointers.
 
-    // TODO: declare Iterator default constructor
-
+    // DONE: declare Iterator default constructor
+    Iterator();
 
 
     // Add custom implementations of the destructor, copy constructor, and
@@ -122,20 +124,20 @@ public:
     // Note: comparing both the list and node pointers should be
     // sufficient to meet these requirements.
 
-    // TODO: declare operator*
+    // DONE: declare operator*
+    T &operator*() const;
 
+    // DONE: declare prefix operator++
+    Iterator &operator++();
 
-    // TODO: declare prefix operator++
+    // DONE: declare postfix operator++
+    Iterator operator++(int);
 
+    // DONE: declare operator==
+    bool operator==(const Iterator &iterator) const;
 
-    // TODO: declare postfix operator++
-
-
-    // TODO: declare operator==
-
-
-    // TODO: declare operator!=
-
+    // DONE: declare operator!=
+    bool operator!=(const Iterator &iterator) const;
 
 
     // Type aliases required to work with STL algorithms. Do not modify these.
@@ -190,7 +192,8 @@ public:
 
 
     // add any friend declarations here
-
+    friend class List; // allows List::begin() and List::() end to 
+      // call private Iterator(const List*, Node*) ctr
 
     // construct an Iterator at a specific position in the given List
     Iterator(const List *lp, Node *np);
@@ -227,14 +230,25 @@ public:
 
 // *** PUBLIC IMPLEMENTATIONS ***
 
-// TODO: implement default constructor
+// DONE: implement default constructor
+// EFFECTS: Initializes an empty list (Default Constructor)
+template <typename T>
+List<T>::List() : first(nullptr), last(nullptr), num_elements(0) {}
 
+// DONE: implement destructor
+// EFFECTS: Releases heap memory via clear() which handles walking nodes and deleting.
+template <typename T>
+List<T>::~List() {
+  clear(); 
+}
 
-// TODO: implement destructor
-
-
-// TODO: implement copy constructor
-
+// DONE: implement copy constructor
+template <typename T>
+void List<T>::copy_all(const List<T> &other) {
+  for (Node *current = other.first; current; current = current->next) {
+    push_back(current->datum);
+  }
+}
 
 // TODO: implement assignment operator
 
